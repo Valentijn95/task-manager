@@ -1,0 +1,15 @@
+<h1>Edit task: <%=@task.title%></h1>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :title %>
+  <br><br>
+  <%= f.label :details %>
+  <br>
+  <%= f.text_area :details %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "cancel",  task_path(@task.id)%>
